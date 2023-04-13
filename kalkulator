@@ -1,0 +1,42 @@
+# Fungsi untuk melakukan operasi penjumlahan
+def penjumlahan(bilangan1, bilangan2):
+    hasil = bilangan1 + bilangan2
+    return hasil
+
+# Fungsi untuk melakukan operasi pembagian
+def pembagian(bilangan1, bilangan2):
+    hasil = bilangan1 / bilangan2
+    return hasil
+
+# Fungsi untuk melakukan operasi perkalian
+def perkalian(bilangan1, bilangan2):
+    hasil = bilangan1 * bilangan2
+    return hasil
+
+# Loop utama
+while True:
+    # Meminta input dari pengguna untuk memilih operasi matematika
+    operasi = input("Pilih operasi matematika (penjumlahan, pembagian, atau perkalian): ")
+
+    # Meminta input dari pengguna untuk dua bilangan
+    bilangan1 = float(input("Masukkan bilangan pertama: "))
+    bilangan2 = float(input("Masukkan bilangan kedua: "))
+
+    # Memilih fungsi yang akan digunakan berdasarkan operasi yang dipilih
+    if operasi == "penjumlahan":
+        hasil = penjumlahan(bilangan1, bilangan2)
+    elif operasi == "pembagian":
+        hasil = pembagian(bilangan1, bilangan2)
+    elif operasi == "perkalian":
+        hasil = perkalian(bilangan1, bilangan2)
+    else:
+        print("Operasi matematika tidak valid.")
+        continue
+
+    # Menampilkan hasil operasi matematika
+    print("Hasil", operasi, "adalah", hasil)
+
+    # Meminta input dari pengguna untuk mengulang atau tidak
+    ulang = input("Ingin mengulang? (y/n): ")
+    if ulang != "y":
+        break
